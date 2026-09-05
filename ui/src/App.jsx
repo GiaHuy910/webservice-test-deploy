@@ -5,6 +5,10 @@ const baseApi = import.meta.env.VITE_API_URL;
 function App() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState("");
+  const [fields, setFields] = useState({
+    email: "",
+    password: "",
+  });
 
   const setFieldValue = ({ target: { name, value } }) => {
     setFields((prev) => ({
