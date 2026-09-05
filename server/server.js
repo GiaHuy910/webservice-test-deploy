@@ -12,7 +12,12 @@ const port = 3001;
 const jwtSecret =
   "dbctYiyub388ZQtcoBilW9ezSZwtncEZsqpU7SRp4N8TDdzVCkIDXBQhbjQbUBItcu3ktOrQuh/dzPEYVHDnEnSRAa2YVTwugfBrSH4A+ZyL2ojO89Y0h19QAXMcUPXxT05PZc86KMiaFG2FkYFouxCwO7Mb/cxGy7YS5duCx+3mI2bLzBf5ZMaGvFY9U50/wtJzTRHt/Il1EUAfK5+cmsB2Pnp2VhgVmTqOT58x3tWEFctQyWAUWKb/KXXoR5n7JMiVRbNi8LPBjIDdfQKHu1163Z39SDc9LZdWHwNmzbZJkcvRD7VjJ54x+JZ3SlLxklphHsvp5PI5GW+SCMY9Kg==";
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: "https://webservice-test-deploy.onrender.com",
+    credentials: true,
+  }),
+);
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // de xu li thong tin tu form

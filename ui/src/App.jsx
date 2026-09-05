@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-const baseApi = "http://localhost:3001/api";
+// const baseApi = "http://localhost:3001/api";
+const baseApi = import.meta.env.VITE_API_URL;
 function App() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState("");
