@@ -14,7 +14,7 @@ const jwtSecret =
 
 app.use(
   cors({
-    origin: "https://webservice-test-deploy.onrender.com",
+    origin: "https://webservice-test-deploy-1.onrender.com",
     credentials: true,
   }),
 );
