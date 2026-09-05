@@ -112,7 +112,7 @@ app.get("/api/auth/me", (req, res) => {
 //   .listen(port, () => {
 //     console.log(`Server is running on port ${port}`);
 //   });
-
-app.listen(port, () => {
-  console.log(`Server is running at port ${port}`);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running at port ${PORT}`);
 });
